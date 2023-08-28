@@ -43,4 +43,21 @@ router.post('/notes', (req, res) => {
     });
 });
 
+// Delete a note by ID
+router.delete('/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+
+    fs.readFile(dbFilePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'An error occurred while reading the notes.' });
+        } else {
+            const notes = JSON.parse(data);
+            const updatedNotes = notes.filter(note => note.id !== noteId);
+            console.log(updatedNotes);
+        }
+    });
+});
+
+
 module.exports = router;
