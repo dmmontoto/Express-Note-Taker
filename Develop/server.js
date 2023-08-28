@@ -1,19 +1,25 @@
 const express = require('express');
 const path = require('path');
-// const api = require('./routes/index.js');
+const apiRoutes = require('./public/routes/apiRoutes');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 app.use(express.static('public'));
+app.use(express.json());
 
+app.use('/api', apiRoutes);
+
+// Serve the notes.html file
 app.get('/notes', (req, res) => {
-    res.redirect('/notes.html');
+    res.sendFile(path.join(__dirname, 'public/notes.html'));
 });
 
+// Serve the index.html file
 app.get('*', (req, res) => {
-    res.redirect('/index.html');
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
 
 app.listen(PORT, () =>
     console.log(`Example app listening at http://localhost:${PORT}`)
