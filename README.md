@@ -28,7 +28,7 @@ First, the user should open the URL to the deployed site on Heroku.
 
 [Note Taker](https://obscure-tor-52322-6bd0bbddb400.herokuapp.com)
 
-Then the user will find the user-friendly and interactive site. Upon clicking the `Get Started` button, the user will be redirected to the `/notes` page. The user will see two text boxes where a title and description of for the note can be typed in. The user will see a save button pop up in the upper-right corner. After saving a note, the user can click the `+` button to clear the boxes and get started on their next important note. Feel free to share the link with others to view all important notes added by the user. 
+Then the user will find the user-friendly and interactive site. Upon clicking the `Get Started` button, the user will be redirected to the `/notes` page. The user will see two text boxes where a title and description of for the note can be typed in. The user will see a save button pop up in the upper-right corner. After saving a note, the boxes will clear and the user can get started on their next important note. Feel free to share the link with others to view all important notes added by the user. 
 
 ## Credits
 
